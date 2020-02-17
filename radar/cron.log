@@ -1,0 +1,27 @@
+attempt[1][IDR403.T.202002172018.png]..
+--2020-02-18 07:24:01--  http://www.bom.gov.au/radar/IDR403.T.202002172018.png
+Resolving www.bom.gov.au... 23.40.73.19
+Connecting to www.bom.gov.au|23.40.73.19|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2469 (2.4K) [image/png]
+Saving to: “IDR403.T.202002172018.png”
+
+     0K ..                                                    100% 1.69M=0.001s
+
+2020-02-18 07:24:01 (1.69 MB/s) - “IDR403.T.202002172018.png” saved [2469/2469]
+
+20/02/18/IDR403.T.202002172018.png
+MAX=[10]
+.. newfile[-]
+.. frame[-]
+.. frame[-]
+.. frame[-]
+.. frame[=]
+.. frame[-]
+convert: no decode delegate for this image format `/tmp/magick-aTn36EED' @ error/constitute.c/ReadImage/532.
+.. frame[-]
+.. frame[-]
+.. frame[-]
+.. frame[=]
+.. frame[=]
+output = [/data/nfs/webserver/apache2/htdocs/www-cgi-bin/dash/radar/../../../www/rad.anim.gif]
