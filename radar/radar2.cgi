@@ -95,7 +95,8 @@ crossargs $A1 $B1 9
 CROSS3=("${CROSS[@]}")
 fi
 
-[ -z "$NOCROP" ] && circleargs $PX $PY 18
+#[ -z "$NOCROP" ] && circleargs $PX $PY 18
+circleargs $PX $PY 18
 [ -z "$NUM" ]  || TEXT="[-${NUM}] $TEXT"
 ##----------------
 [ -z "$DEBUG" ] || echo "TEXT=[$TEXT] NUM=[$NUM]"
