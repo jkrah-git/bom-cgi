@@ -99,6 +99,10 @@ fi
 circleargs $PX $PY 18
 [ -z "$NUM" ]  || TEXT="[-${NUM}] $TEXT"
 ##----------------
+[ -z "$NUM" ] && NUM="0"
+
+TEXT="`conv_ts`"
+
 [ -z "$DEBUG" ] || echo "TEXT=[$TEXT] NUM=[$NUM]"
 [ -z "$DEBUG" ] && `dirname $0`/render.cgi T=$NUM | convert - \
 "${CROSS1[@]}" \
@@ -108,7 +112,7 @@ circleargs $PX $PY 18
 "${LINE0[@]}" \
 $CROP \
 -resize 500x500 \
--stroke "#ffffffff" \
+-stroke "#000000ff" \
 -fill "#ffffffff" \
 -draw "text 0,10 \"$TEXT\"" \
 -

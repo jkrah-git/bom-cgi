@@ -29,7 +29,8 @@ echo '<TABLE WIDTH="100%">'
 	#cell "`bom_img IDR40I`"
 	#cell "`imgurl http://www.shopsmart.au.nu/cgi-bin/go.cgi \"\" 400`"
 	#cell "`imgurl 'http://www.shopsmart.au.nu/cgi-bin/dash/radar/radar2.cgi?X0=-35.663&Y0=149.511&A0=261&B0=261&X1=-35.3042&Y1=149.1903&A1=203&B1=182&X2=-35.157555&Y2=149.346770' 'http://www.shopsmart.au.nu/cgi-bin/dash/radar.cgi' 400`"
-	cell "`imgurl 'http://www.shopsmart.au.nu/cgi-bin/dash/radar/radar2.cgi?X0=-35.663&Y0=149.511&A0=255&B0=255&X1=-35.3042&Y1=149.1903&A1=197&B1=176&X2=-35.157555&Y2=149.346770' 'http://www.shopsmart.au.nu/cgi-bin/dash/radar.cgi' 400`"
+	#cell "`imgurl 'http://www.shopsmart.au.nu/cgi-bin/dash/radar/radar2.cgi?X0=-35.663&Y0=149.511&A0=255&B0=255&X1=-35.3042&Y1=149.1903&A1=197&B1=176&X2=-35.157555&Y2=149.346770' 'http://www.shopsmart.au.nu/cgi-bin/dash/radar.cgi' 400`"
+	cell "`imgurl http://www.shopsmart.au.nu/zoom.gif 'http://www.shopsmart.au.nu/cgi-bin/dash/radar/radar2.cgi?X0=-35.663&Y0=149.511&A0=255&B0=255&X1=-35.3042&Y1=149.1903&A1=197&B1=176&X2=-35.157555&Y2=149.346770' 400`"
 
 	# 256k
 	#cell "`bom_img IDR402`"

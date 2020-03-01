@@ -1,3 +1,5 @@
 *.swp
 *.00?
 *.png
+radar/cron.log
+radar/data/index.txt

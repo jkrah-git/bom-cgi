@@ -29,6 +29,18 @@ get_radar_ts()
 #	TS="`date -u -d \"$THEN\" +%Y%m%d%H`${FINMIN}"
 	echo "`date -u -d \"$THEN\" +%Y%m%d%H`${FINMIN}"
 }
+
+###
+conv_ts()
+{
+	TS1="$1"
+	[ -z "$TS1" ] && TS1="`get_radar_ts`"
+	# TS2="2020-03-01 01:42:00"
+	TS2="`echo $TS1  | sed 's|^\(....\)\(..\)\(..\)\(..\)\(..\)$|\1-\2-\3 \4:\5:00|g'`"
+	# TS3=epoc sec
+	TS3=`date -u +%s -d "$TS2"`
+	date -d @$TS3 +%a\ %x\ %X
+}
 #### -----------------
 get_radar()
 {

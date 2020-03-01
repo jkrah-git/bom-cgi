@@ -43,13 +43,18 @@ if [ ! -f "$FILE" ]; then
 	done
 	[ -f "$FILE" ] && echo "$SUBDIR/$FILE" >> "$LOCK" 
 fi 
+
+FILE2="IDR403.zoom.${TS}.png"
+wget "http://www.shopsmart.au.nu/cgi-bin/dash/radar/radar2.cgi?X0=-35.663&Y0=149.511&A0=255&B0=255&X1=-35.3042&Y1=149.1903&A1=197&B1=176&X2=-35.157555&Y2=149.346770" -O $FILE2
+
 cd ../../.. || abort 'cd err'
 
 ls "$SUBDIR/$FILE" || abort "download faied"
 tail -100 "$LOCK" > "$INDEX" || abort "index update failed"
 cd ..
 
-`dirname $0`/anim.cgi 10
+#`dirname $0`/anim.cgi 10
+`dirname $0`/zoom-anim.sh 10
 
 [ -f "$LOCK" ] && /bin/rm "$LOCK"
 
