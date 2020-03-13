@@ -11,9 +11,26 @@ get_arg()
 	[ -z "$1" ] || list_args |grep "^$1=" | awk -F= '{ print $2 }' | awk '{ print $1 }'
 }
 #### -----------------
+list_files()
+{
+HOST=ftp.bom.gov.au
+USER=anonymous
+PASSWORD=jasonkrah@yahoo.com.au
+ftp -in $HOST <<EOF | awk '{ print $NF }'
+user $USER $PASSWORD
+cd /anon/gen/radar/
+ls IDR403.T.*.png
+bye
+EOF
+}
 
+
+#### -----------------
 get_radar_ts()
 {
+
+	list_files |  tail -1 | awk -F. '{ print $3 }'
+	return
 	let N=0
 	[ -z "$1" ] || let N=$1
         let GAP=6*$N
@@ -25,6 +42,7 @@ get_radar_ts()
 	[ $MIN -lt 0 ] && let MIN=$MIN+60
 	let IDX=$MIN/6
 	let NEWMIN=$IDX*6
+	let NEWMIN=$NEWMIN-2
 	FINMIN=`printf "%.2d" $NEWMIN`
 #	TS="`date -u -d \"$THEN\" +%Y%m%d%H`${FINMIN}"
 	echo "`date -u -d \"$THEN\" +%Y%m%d%H`${FINMIN}"
